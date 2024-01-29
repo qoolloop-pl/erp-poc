@@ -1,5 +1,8 @@
+using System.Reflection;
 using ErpModule.Infrastructure;
 using ErpModule.Infrastructure.Data;
+using ErpModule.Trucks.Core;
+using ErpModule.Trucks.WebApi.Helpers.OpenAPI;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,7 +21,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
-    options.UseInlineDefinitionsForEnums();
+    options.DocumentFilter<SmartEnumDocumentFilter>(new List<Assembly> { typeof(TruckStatus).Assembly });
 });
 
 var app = builder.Build();

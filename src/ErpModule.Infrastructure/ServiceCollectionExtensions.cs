@@ -12,8 +12,6 @@ public static class ServiceCollectionExtensions
     {
         RegisterEf(services);
 
-
-
         services.AddMediatR(configuration =>
         {
             configuration.RegisterServicesFromAssemblyContaining<Truck>();

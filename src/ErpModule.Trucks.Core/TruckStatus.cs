@@ -16,6 +16,11 @@ public abstract class TruckStatus : SmartEnum<TruckStatus>
 
     public abstract bool CanMoveTo(TruckStatus nextStatus);
 
+    public static bool TryParse(string name, out TruckStatus status)
+    {
+        return TryFromName(name, true, out status);
+    }
+
     private sealed class OutOfServiceStatus: TruckStatus
     {
         public OutOfServiceStatus() : base("OutOfService", 0)

@@ -1,4 +1,3 @@
-using System.Runtime.InteropServices;
 using Ardalis.Result;
 using ErpModule.Shared.Specification;
 using ErpModule.Trucks.Core;
@@ -132,16 +131,11 @@ public class TrucksController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> ChangeStatus(Guid id, string status)
+    public async Task<IActionResult> ChangeStatus(Guid id, TruckStatus status)
     {
-        if (!TruckStatus.TryFromName(status, out var nextStatus))
-        {
-            return BadRequest("status is not correct");
-        }
-
         var result = await _mediator.Send(new UpdateTruckStatusCommand(
             id,
-            nextStatus));
+            status));
 
         if (result.IsSuccess)
         {
@@ -155,7 +149,7 @@ public class TrucksController : ControllerBase
 
         if (result.Status == ResultStatus.Forbidden)
         {
-            return BadRequest($"cannot change current status to {nextStatus.Name}");
+            return BadRequest($"cannot change current status to {status.Name}");
         }
 
         return BadRequest(result.Status);
