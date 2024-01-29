@@ -4,3 +4,7 @@ GET {{ErpModule.Trucks.WebApi_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+
+
+GET {{ErpModule.Trucks.WebApi_HostAddress}}/api/Trucks?name=pe
+Accept: application/json

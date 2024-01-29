@@ -1,5 +1,7 @@
-### App specific
-.db/
+### App specific ###
+
+#sqlite db file
+app.db
 
 ### VisualStudioCode template
 .vscode/*

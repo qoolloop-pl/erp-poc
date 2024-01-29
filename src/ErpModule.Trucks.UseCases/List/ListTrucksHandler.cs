@@ -1,7 +1,5 @@
 using Ardalis.Result;
 using ErpModule.Shared;
-using ErpModule.Shared.Specification;
-using ErpModule.Shared.Specification.List;
 using ErpModule.Trucks.Core;
 using ErpModule.Trucks.Core.Specification;
 

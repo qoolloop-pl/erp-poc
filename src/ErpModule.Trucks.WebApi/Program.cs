@@ -14,6 +14,7 @@ builder.Services.AddDbContext<ErpDbContext>(options => options.UseSqlite(erpDbCo
 
 builder.Services.AddInfrastructure();
 
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -29,6 +30,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseRouting();
+app.MapControllers();
 
 var summaries = new[]
 {
