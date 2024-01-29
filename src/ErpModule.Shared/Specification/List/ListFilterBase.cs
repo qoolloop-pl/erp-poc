@@ -2,8 +2,8 @@ namespace ErpModule.Shared.Specification.List;
 
 public class ListFilterBase
 {
-    public int? Skip { get; set; }
-    public int? Take { get; set; }
+    public int? Page { get; set; }
+    public int? PageSize { get; set; }
     /// <summary>
     /// Name of property
     /// </summary>

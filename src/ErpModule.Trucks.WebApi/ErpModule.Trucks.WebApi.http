@@ -1,4 +1,5 @@
 @ErpModule.Trucks.WebApi_HostAddress = http://localhost:5180
+@ExistingId = 529054e4-0038-4c5e-b597-2e0d32e3c9d4
 
 GET {{ErpModule.Trucks.WebApi_HostAddress}}/weatherforecast/
 Accept: application/json
@@ -6,5 +7,10 @@ Accept: application/json
 ###
 
 
-GET {{ErpModule.Trucks.WebApi_HostAddress}}/api/Trucks?name=pe
+GET {{ErpModule.Trucks.WebApi_HostAddress}}/api/Trucks
 Accept: application/json
+
+###
+
+
+POST {{ErpModule.Trucks.WebApi_HostAddress}}/api/Trucks/{{ExistingId}}/status/AtJob

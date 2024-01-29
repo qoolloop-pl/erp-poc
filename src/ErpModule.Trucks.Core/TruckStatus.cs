@@ -18,7 +18,7 @@ public abstract class TruckStatus : SmartEnum<TruckStatus>
 
     private sealed class OutOfServiceStatus: TruckStatus
     {
-        public OutOfServiceStatus() : base("Out Of Service", 0)
+        public OutOfServiceStatus() : base("OutOfService", 0)
         {
         }
 
@@ -37,7 +37,7 @@ public abstract class TruckStatus : SmartEnum<TruckStatus>
 
     private sealed class ToJobStatus: TruckStatus
     {
-        public ToJobStatus() : base("To Job", 2)
+        public ToJobStatus() : base("ToJob", 2)
         {
         }
 
@@ -47,7 +47,7 @@ public abstract class TruckStatus : SmartEnum<TruckStatus>
 
     private sealed class AtJobStatus: TruckStatus
     {
-        public AtJobStatus() : base("At Job", 3)
+        public AtJobStatus() : base("AtJob", 3)
         {
         }
 
