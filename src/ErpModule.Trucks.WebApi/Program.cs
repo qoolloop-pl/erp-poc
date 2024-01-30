@@ -7,12 +7,10 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-
 builder.Logging.AddConsole();
 
 var erpDbConnectionString = builder.Configuration.GetConnectionString("ErpDbConnection") ?? throw new InvalidOperationException("Connection string 'ErpDbConnection' not found.");
+
 builder.Services.AddDbContext<ErpDbContext>(options => options.UseSqlite(erpDbConnectionString));
 
 builder.Services.AddInfrastructure();

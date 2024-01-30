@@ -27,8 +27,5 @@ public class CreateTruckHandler: ICommandHandler<CreateTruckCommand, Result<Guid
         {
             return Result.Error(e.Message);
         }
-
-
-
     }
 }

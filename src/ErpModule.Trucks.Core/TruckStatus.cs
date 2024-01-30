@@ -4,6 +4,9 @@ namespace ErpModule.Trucks.Core;
 
 public abstract class TruckStatus : SmartEnum<TruckStatus>
 {
+    /// <summary>
+    /// Status can be moved to any TruckStatus
+    /// </summary>
     public static readonly TruckStatus OutOfService = new OutOfServiceStatus();
     public static readonly TruckStatus Loading = new LoadingStatus();
     public static readonly TruckStatus ToJob = new ToJobStatus();

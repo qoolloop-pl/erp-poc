@@ -4,11 +4,11 @@ using ErpModule.Trucks.Core;
 
 namespace ErpModule.Trucks.UseCases.Update;
 
-public class UpdateTruckStatusCommandHandler : ICommandHandler<UpdateTruckStatusCommand, Result>
+public class UpdateTruckStatusHandler : ICommandHandler<UpdateTruckStatusCommand, Result>
 {
     private readonly IRepository<Truck> _repository;
 
-    public UpdateTruckStatusCommandHandler(IRepository<Truck> repository)
+    public UpdateTruckStatusHandler(IRepository<Truck> repository)
     {
         _repository = repository;
     }
