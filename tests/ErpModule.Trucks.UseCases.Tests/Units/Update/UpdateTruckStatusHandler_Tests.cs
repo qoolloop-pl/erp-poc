@@ -13,12 +13,18 @@ public class UpdateTruckStatusHandler_Tests
 {
     private readonly Guid _testTruckId = new Guid("9CC867D3-3A7D-4794-BB94-1E4F4EB3BA1D");
 
-    private Truck CreateTruck()
+    private Truck CreateTruck(TruckStatus? withStatus = null)
     {
-        return new Truck("code", "name", "description")
+        var truck = new Truck("code", "name", "description")
         {
-            Id = _testTruckId,
+            Id = _testTruckId
         };
+
+        if (withStatus is not null && truck.Status.CanMoveTo(withStatus))
+        {
+            truck.ChangeStatus(withStatus);
+        }
+        return truck;
     }
 
     [Fact]
@@ -59,7 +65,7 @@ public class UpdateTruckStatusHandler_Tests
         var newBadStatus = TruckStatus.AtJob;
         var repository = Substitute.For<IRepository<Truck>>();
         repository.GetByIdAsync(Arg.Any<Guid>(), Arg.Any<CancellationToken>())
-            .Returns(CreateTruck());
+            .Returns(CreateTruck(TruckStatus.Returning));
 
         var sut = new UpdateTruckStatusHandler(repository);
 

@@ -8,7 +8,7 @@ public class Truck: EntityBase, IAggregateRoot
 {
     public string Code { get; private set; }
     public string Name { get; private set; }
-    public TruckStatus Status { get; private set; } = TruckStatus.Returning;
+    public TruckStatus Status { get; private set; } = TruckStatus.OutOfService;
     public string? Description { get; private set; }
 
     public Truck(string code, string name, string? description = null)

@@ -38,11 +38,11 @@ public class Truck_Tests
     }
 
     [Fact]
-    public void Constructor_InitializesStatusToReturning()
+    public void Constructor_InitializesStatusToOutOfService()
     {
         var truck = GetTestTruck();
 
-        Assert.Equal(TruckStatus.Returning, truck.Status);
+        Assert.Equal(TruckStatus.OutOfService, truck.Status);
     }
 
     [Fact]
@@ -59,10 +59,12 @@ public class Truck_Tests
     public void ChangeStatus_ReturnsFalseForInvalidTransition()
     {
         var truck = GetTestTruck();
-        var result = truck.ChangeStatus(TruckStatus.AtJob);
+        truck.ChangeStatus(TruckStatus.AtJob);
+
+        var result = truck.ChangeStatus(TruckStatus.ToJob);
 
         Assert.False(result);
-        Assert.Equal(TruckStatus.Returning, truck.Status);
+        Assert.Equal(TruckStatus.AtJob, truck.Status);
     }
 
     [Fact]
