@@ -5,6 +5,10 @@ namespace ErpModule.Trucks.WebApi.Tests.DataSeeders;
 
 public class TruckDataSeeder
 {
+    public static readonly Guid IdOfNotExistingTruck = new Guid("a0c0e6d7-c35e-431e-b339-1f6885d32380");
+
+    public static readonly int TestTrucksCount = 4;
+
     public static readonly Truck TruckOne = new Truck("code1", "name1", "description 1")
         { Id = new Guid("75624a50-494a-4cbd-a262-ed1a41e1ab88") };
 

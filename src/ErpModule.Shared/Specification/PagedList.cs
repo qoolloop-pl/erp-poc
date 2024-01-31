@@ -23,6 +23,20 @@ public class Pagination
     public int Skip { get; set; }
     public int Take { get; set; }
 
+    public Pagination() : this(0, 0, 0, 0, 0, 0)
+    {
+    }
+
+    public Pagination(int totalItems, int totalPages, int pageSize, int page, int skip, int take)
+    {
+        TotalItems = totalItems;
+        TotalPages = totalPages;
+        PageSize = pageSize;
+        Page = page;
+        Skip = skip;
+        Take = take;
+    }
+
     public Pagination(ListFilterBase filter, int totalItems)
     {
         TotalItems = totalItems;

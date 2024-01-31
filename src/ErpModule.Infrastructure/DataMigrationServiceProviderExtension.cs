@@ -21,7 +21,7 @@ public static class DataMigrationServiceProviderExtension
                 continue;
             }
 
-            if ((await dbContext.Database.GetPendingMigrationsAsync()).Any())
+            if (dbContext.Database.IsRelational() && (await dbContext.Database.GetPendingMigrationsAsync()).Any())
             {
                 logger.LogInformation($"there are migrations for  [{contextType.Name}], migrating");
                 await dbContext.Database.MigrateAsync();

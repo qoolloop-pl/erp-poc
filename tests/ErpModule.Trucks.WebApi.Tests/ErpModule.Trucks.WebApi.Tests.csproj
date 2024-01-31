@@ -26,6 +26,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\src\ErpModule.Infrastructure\ErpModule.Infrastructure.csproj" />
+      <ProjectReference Include="..\..\src\ErpModule.Trucks.WebApi\ErpModule.Trucks.WebApi.csproj" />
     </ItemGroup>
 
 </Project>
