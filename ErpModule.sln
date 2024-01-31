@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErpModule.Trucks.WebApi", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErpModule.Trucks.UseCases.Tests", "tests\ErpModule.Trucks.UseCases.Tests\ErpModule.Trucks.UseCases.Tests.csproj", "{F257605F-9D8D-482A-B6D1-DF9E696FFE08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErpModule.Trucks.WebApi.Tests", "tests\ErpModule.Trucks.WebApi.Tests\ErpModule.Trucks.WebApi.Tests.csproj", "{CC6D1DA0-B584-46BF-84B0-C25C8C781B39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,7 @@ Global
 		{60D2710E-B1AA-4D73-A481-1F07918E85B1} = {22EC1033-F644-4E68-BA55-C3924300B436}
 		{D48AF818-75C9-4C25-A6C4-4B0E93BECE12} = {EEED21EA-1012-4A7C-87A2-D154291858EF}
 		{F257605F-9D8D-482A-B6D1-DF9E696FFE08} = {22EC1033-F644-4E68-BA55-C3924300B436}
+		{CC6D1DA0-B584-46BF-84B0-C25C8C781B39} = {22EC1033-F644-4E68-BA55-C3924300B436}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C423B7DF-683B-49DC-8276-D48FDF46DCE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -61,5 +64,9 @@ Global
 		{F257605F-9D8D-482A-B6D1-DF9E696FFE08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F257605F-9D8D-482A-B6D1-DF9E696FFE08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F257605F-9D8D-482A-B6D1-DF9E696FFE08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC6D1DA0-B584-46BF-84B0-C25C8C781B39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC6D1DA0-B584-46BF-84B0-C25C8C781B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC6D1DA0-B584-46BF-84B0-C25C8C781B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC6D1DA0-B584-46BF-84B0-C25C8C781B39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
